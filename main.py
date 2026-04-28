@@ -39,3 +39,18 @@ Examples:
  
     while i < len(args):
         command = args[i]
+    
+    if command == "view":
+            print("Tasks:")
+            for task in tasks:
+                print(task)
+            i += 1
+ 
+    elif command == "add":
+            if i + 1 >= len(args):
+                raise IndexError('Task description required for "add".')
+            task_desc = args[i + 1]
+            tasks.append(task_desc)
+            print(f'Task "{task_desc}" added.')
+            modified = True
+            i += 2
