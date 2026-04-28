@@ -27,15 +27,13 @@ Examples:
   python main.py tasks.txt add "Call mom" remove "Take out trash" view""")
         sys.exit(0)
 
-        # Read tasks once at the start
     tasks = read_todo_file(file_path)
  
-    # If no command given, exit silently
     if len(sys.argv) < 3:
         sys.exit(0)
  
-    # Process commands sequentially
-    args = sys.argv[2:]  # All arguments after the file path
+
+    args = sys.argv[2:]  
     i = 0
     modified = False
  
