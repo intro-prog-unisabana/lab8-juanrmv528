@@ -54,3 +54,18 @@ Examples:
             print(f'Task "{task_desc}" added.')
             modified = True
             i += 2
+    
+    elif command == "remove":
+            if i + 1 >= len(args):
+                raise IndexError('Task description required for "remove".')
+            task_desc = args[i + 1]
+            try:
+                tasks.remove(task_desc)
+                print(f'Task "{task_desc}" removed.')
+                modified = True
+            except ValueError:
+                print(f'Task "{task_desc}" not found.')
+            i += 2
+ 
+        else:
+            raise ValueError("Command not found!")
