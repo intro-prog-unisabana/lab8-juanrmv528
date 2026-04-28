@@ -6,13 +6,12 @@ import sys
 from todo_manager import read_todo_file, write_todo_file
  
 try:
-    # Verify at least one argument (file path) was provided
     if len(sys.argv) < 2:
         raise IndexError("Insufficient arguments provided!")
  
     file_path = sys.argv[1]
  
-    # Handle --help flag
+
     if file_path == "--help":
         print("""Usage: python main.py <file_path> <command> [arguments]...
  
