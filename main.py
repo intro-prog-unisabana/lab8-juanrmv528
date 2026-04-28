@@ -70,7 +70,6 @@ Examples:
         else:
             raise ValueError("Command not found!")
     
-        # Write file once at the end if tasks were modified
     if modified:
         write_todo_file(file_path, tasks)
  
